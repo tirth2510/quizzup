@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/0bc5eb8293.js" crossorigin="anonymous"></script>
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #966ee6;
+  color: white;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+  <nav>
+    <input type="checkbox" name="" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fa-solid fa-bars"></i>
+    </label>
+    <label class="logo">Quizzup</label>
+    <ul>
+        <li><a href="../index.html" class="active">Home</a></li>
+        <li><a href="../About/about.html">About</a></li>
+        <li><a href="../Login/index.html">Logout</a></li>
+
+    </ul>
+</nav>
+
+<div class="about-section">
+  <h1 >About Us </h1>
+  <p>Quizzup is a quiz website designed specially for the innovative and creative young minds.It challenges the mind and helps test skills.
+  Wheter you're trying to learn a new topic or twest an old one, Quizzup is the place for you!</p>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="https://media.licdn.com/dms/image/C5603AQEMFn1BpitBzw/profile-displayphoto-shrink_800_800/0/1639669552370?e=2147483647&v=beta&t=4WyNW_XfE-r6ZA_Uzf7ttSRSPDsUC2XB-2t61Ft5y3M" alt="Fiyoni Paradia" style="width:100%">
+      <div class="container">
+        <p id="demo">
+          <!-- <h4>Fiyoni Paradia</h4>
+          <p class="title">CEO & Founder</p> -->
+        </p>
+        <p>Fiyoni is a passionate individual who loves programming and WPL in somaiya college</p>
+        <p>fiyoni.p@somaiya.edu</p>
+      </div>
+      <a href="https://www.instagram.com/"><i class="fab fa-instagram fa-2x" style="color: #ac2bac;"></i></a>
+      <a href="https://twitter.com/?lang=en-in"><i class="fab fa-twitter fa-2x" style="color: #55acee;"></i></a>
+      <a href="https://www.linkedin.com/feed/"><i class="fab fa-linkedin-in fa-2x" style="color: #0082ca;"></i></a>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="https://media.licdn.com/dms/image/C4E03AQGC3kx-cCee5Q/profile-displayphoto-shrink_800_800/0/1638683192248?e=2147483647&v=beta&t=K9Dxq8w8IKN2ihQaHkL_Ys5qWY-7NnSNmL1fo_jVicY" alt="Mike" style="width:100%">
+      <div class="container">
+        <p id="demo1">
+          <!-- <h4>Tirth Patel</h4>
+          <p class="title">CEO and Founder</p> -->
+      </p>
+        <p>Tirth is a passionate individual who loves coding and WPL in somaiya college</p>
+        <p>tirth.jp@somaiya.edu</p>
+      </div>
+      <a href="https://www.instagram.com/"><i class="fab fa-instagram fa-2x" style="color: #ac2bac;"></i></a>
+      <a href="https://twitter.com/?lang=en-in"><i class="fab fa-twitter fa-2x" style="color: #55acee;"></i></a>
+      <a href="https://www.linkedin.com/feed/"><i class="fab fa-linkedin-in fa-2x" style="color: #0082ca;"></i></a>
+    </div>
+  </div>
+</div>
+<div class="cntct">
+<a href="http://localhost:3000/" class="button"/>CONTACT US</a>
+</div>
+<script>
+  var myObj = { name: "CEO & Founder" };
+  var myJSON = JSON.stringify(myObj);
+  var myNewObj =
+  JSON.parse(myJSON);
+  document.getElementById("demo").innerHTML =
+  "Fiyoni Paradia " + myNewObj.name  ;
+
+  var myObj1 = { name: "CTO & Founder" };
+  var myJSON1 = JSON.stringify(myObj1);
+  var myNewObj1 =
+  JSON.parse(myJSON1);
+  document.getElementById("demo1").innerHTML =
+  "Tirth Patel " + myNewObj1.name  ;
+
+
+  </script>
+
+</body>
+</html>

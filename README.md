@@ -1,1 +1,1 @@
-# quizzup
+# quiz
